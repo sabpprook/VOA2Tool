@@ -16,7 +16,7 @@ namespace VOA2Tool
 
         static void Main(string[] args)
         {
-            if (args.Length < 3 || args[0] != "--key" || (args[1] != "orig" && args[1] != "steam") || (args[2] != "--unpack" && args[2] != "--repack"))
+            if (args.Length < 4 || args[0] != "--key" || (args[1] != "orig" && args[1] != "steam") || (args[2] != "--unpack" && args[2] != "--repack"))
                 PrintUsage();
 
             blowfish = new Blowfish(Encoding.ASCII.GetBytes(args[1] == "orig" ? ORIG_KEY : STEAM_KEY));
